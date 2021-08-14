@@ -237,28 +237,23 @@ color: var(--accent-color);
      
  }
  .features{
-    
-    display: flex;
-    
+    display: flex; 
  }
  .features-item:not(:first-child){
-   
      margin-left: 30px;
  } 
- .features-item:before{
-     display: block;
-     content: "";
+ .icon-box{
+     display: flex;
      height: 120px;
      background-size:contain;
-     background-repeat:no-reapet;
-     background-position:center;
      background-color:#F5F4FA;
-     margin-bottom: 30px;
-     background-image: linear-gradient( to right, rgba(47, 48, 58, 0,4,rgba(47, 48, 58, 0,4)))
-     url(./img/svg/sprite.svg#icon-envelope ) ;
-  
+     margin-bottom: 30px; 
+     justify-content: center;
+     align-content: center;
+     padding-top: 25px;
+     padding-bottom: 25px;
  }
-
+ 
  .features-title{
      
      margin-bottom: 10px;
@@ -266,6 +261,7 @@ color: var(--accent-color);
      font-weight: 700;
      line-height: 1.14;
  }
+ 
 .features-description {
     
     color: var(--primary-text-color);
@@ -316,20 +312,27 @@ color: var(--accent-color);
     margin-top: 10px; 
 }
 .network{
-    display: flex;
-    
+  display: flex;
+}
+.network-item{
+    display: inline-block;
 }
 .network-list{
-    display:inline-flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
-    text-align: center;
     width: 44px;
     height: 44px;
    border-radius: 50%;
-   padding: 10px;
-   background-color: var(--primary-bg-color);
-   
+   text-align: center;
+   margin-bottom: 30px;
+   margin-right: 22px;
+} 
+.network-list:first-child{
+    margin-left: 32px;
+}
+.network-list:last-child{
+    margin-right: 32px;
 }
 .connect-network-list{
     display:inline-flex;
@@ -344,14 +347,13 @@ color: var(--accent-color);
 }
  .icon-instagram, .icon-twitter, .icon-facebook, .icon-linkedin{
 
-    fill: #AFB1B8;
+    fill: currentColor
 }
 .network-list:hover{
-    
     background-color: var(--accent-color);
    fill: var(--primary-bg-color);
 }
-.icon-instagram, .icon-twitter, .icon-facebook, .icon-linkedin:hover{
+.icon-instagram:hover, .icon-twitter:hover, .icon-facebook:hover, .icon-linkedin:hover{
     fill: var(--primary-bg-color)
 }
 .clients{
@@ -364,28 +366,29 @@ color: var(--accent-color);
     margin-bottom: 50px;
 }
 .clients-list{
-    
    display: inline-flex;
 }
 .clients-example{
-    margin-right: 30px;
-    border: solid 1 px #AFB1B8;
+    display: flex;
+    border:1px solid  #AFB1B8;
     border-radius: 4px;
-    box-sizing: border-box;
     justify-content: center;
     width: 170px;
     height: 92px;
     align-items: center;
-    padding: 0;
-}
+    margin-right: 30px;
 
+}
 .clients-icon{
-   
     fill: #AFB1B8;
-
+    justify-content: center;
+    align-content: center;
 }
-.clients-example:hover .clients-icon{
-    border-color: var(--accent-color);
+.clients-icon:hover{
+    fill: var(--accent-color);
+}
+
+.clients-example:hover{
     fill: var(--accent-color);
 }
 .clients-example:last-child{
@@ -451,8 +454,8 @@ margin-bottom: 9px;
     text-transform: uppercase;
     color: var(--primary-bg-color);
     margin-bottom: 20px;
+    
    
-
 }
 .icon-instagram-foot, .icon-twitter-foot, .icon-facebook-foot, .icon-linkedin-foot{
 
@@ -462,7 +465,7 @@ margin-bottom: 9px;
     fill: var(--primary-bg-color);
 }
 .connect-network-list{
-    display:inline-flex;
+    display:flex;
     justify-content: center;
     align-items: center;
     border-radius: 50%;
