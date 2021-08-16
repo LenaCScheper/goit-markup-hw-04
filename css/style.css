@@ -69,7 +69,7 @@ a{
 
 .container-main-nav{
     display: flex;
-    align-items: center;
+    align-items: baseline;
 }
 
 
@@ -102,10 +102,7 @@ line-height: 1.14;
 .site-nav-lin:focus {
     color: var(--accent-color);
 }
-.current{
-color: var(--accent-color);
 
-}
 
 /* Contact-nav*/
     .contact-nav{
@@ -163,7 +160,7 @@ color: var(--accent-color);
     max-width: 1600px;
     height: 600px;
     background-image: linear-gradient(to right, 
-    rgba(47, 48, 58, 0.4), rgba(41, 51, 156, 0.4)),
+    rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
      url(../img/Img-bg.jpg);
     background-repeat: no-repeat;
     background-position: center;
@@ -195,6 +192,11 @@ color: var(--accent-color);
         text-align: center;
         margin-left: auto;
         margin-right: auto;
+        padding-top: 10px;
+        padding-left: 32px;
+        padding-right: 32px;
+        padding-bottom: 10px;
+        border-radius: 4px;
     }
     .hero-button-main:hover,
     .hero-button-main:focus{
@@ -286,7 +288,7 @@ color: var(--accent-color);
 }
 .comands-item{
     display: flex;
-    justify-content: center; 
+   
 }
 .comands-title-top{
     background-color: var(--primary-bg-color);
@@ -313,9 +315,11 @@ color: var(--accent-color);
 }
 .network{
   display: flex;
+  justify-content: center;
+  margin-top: 16px;
 }
-.network-item{
-    display: inline-block;
+.network-item:not(:last-child){
+    margin-right: 10px;
 }
 .network-list{
     display: inline-flex;
@@ -324,16 +328,9 @@ color: var(--accent-color);
     width: 44px;
     height: 44px;
    border-radius: 50%;
-   text-align: center;
-   margin-bottom: 30px;
-   margin-right: 22px;
+   text-align: center; 
 } 
-.network-list:first-child{
-    margin-left: 32px;
-}
-.network-list:last-child{
-    margin-right: 32px;
-}
+
 .connect-network-list{
     display:inline-flex;
     align-items: center;
@@ -345,16 +342,15 @@ color: var(--accent-color);
    background-color: var(--primary-bg-color);
    
 }
- .icon-instagram, .icon-twitter, .icon-facebook, .icon-linkedin{
-
-    fill: currentColor
+.network-icon{
+    fill:#AFB1B8;
 }
-.network-list:hover{
+.network-list:hover,
+.network-list:focus{
     background-color: var(--accent-color);
-   fill: var(--primary-bg-color);
 }
-.icon-instagram:hover, .icon-twitter:hover, .icon-facebook:hover, .icon-linkedin:hover{
-    fill: var(--primary-bg-color)
+.network-list:hover .network-icon{
+    fill: var(--primary-bg-color);
 }
 .clients{
     font-weight: 700;
@@ -367,17 +363,19 @@ color: var(--accent-color);
 }
 .clients-list{
    display: inline-flex;
+   justify-content: center;
+   align-items: center;
 }
 .clients-example{
-    display: flex;
+    display: block;
     border:1px solid  #AFB1B8;
     border-radius: 4px;
-    justify-content: center;
     width: 170px;
     height: 92px;
-    align-items: center;
-    margin-right: 30px;
-
+    padding-bottom: 16px;
+    padding-right: 32px;
+    padding-top: 16px;
+    padding-left: 32px;
 }
 .clients-icon{
     fill: #AFB1B8;
@@ -388,11 +386,12 @@ color: var(--accent-color);
     fill: var(--accent-color);
 }
 
-.clients-example:hover{
+.clients-example:hover .clients-icon{
+    border-color:1px solid var(--accent-color); 
     fill: var(--accent-color);
 }
-.clients-example:last-child{
-    margin-right: 0px;
+.clients-list:not(:last-child){
+    margin-right: 30px;
 }
 
 /* Footer*/
@@ -457,11 +456,12 @@ margin-bottom: 9px;
     
    
 }
-.icon-instagram-foot, .icon-twitter-foot, .icon-facebook-foot, .icon-linkedin-foot{
+.network-icon-foot{
 
     fill:var(--primary-bg-color); 
 }
-.icon-instagram-foot, .icon-twitter-foot, .icon-facebook-foot, .icon-linkedin-foot:hover{
+.network-icon-foot:hover,
+.network-icon-foot:focus{
     fill: var(--primary-bg-color);
 }
 .connect-network-list{
@@ -469,13 +469,13 @@ margin-bottom: 9px;
     justify-content: center;
     align-items: center;
     border-radius: 50%;
-    padding: 10px;
     background-color: rgba(255, 255, 255, 0.1);
     fill: var(--primary-bg-color)
 }
-.connect-network-list:not(:last-child){
+.connect-network:not(:last-child){
     margin-right: 10px;
 }
+
 .connect-network-list:hover{
     background-color: var(--accent-color);
     fill: var(--primary-bg-color);
