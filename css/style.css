@@ -99,7 +99,10 @@ font-weight: 500;
 line-height: 1.14;
 }
 .site-nav-link:hover,
-.site-nav-lin:focus {
+.site-nav-link:focus {
+    color: var(--accent-color);
+}
+.current{
     color: var(--accent-color);
 }
 
@@ -321,7 +324,7 @@ line-height: 1.14;
 .network-item:not(:last-child){
     margin-right: 10px;
 }
-.network-list{
+.network-link{
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -331,7 +334,7 @@ line-height: 1.14;
    text-align: center; 
 } 
 
-.connect-network-list{
+.connect-network-link{
     display:inline-flex;
     align-items: center;
     justify-content: center;
@@ -345,14 +348,18 @@ line-height: 1.14;
 .network-icon{
     fill:#AFB1B8;
 }
-.network-list:hover,
-.network-list:focus{
+.network-link:hover,
+.network-link:focus{
     background-color: var(--accent-color);
 }
-.network-list:hover .network-icon{
+.network-link:hover .network-icon,
+.network-link:focus .network-icon{
     fill: var(--primary-bg-color);
 }
 .clients{
+    display: flex;
+}
+.clients-title{
     font-weight: 700;
     font-size: 36px;
     line-height: 1.17;
@@ -361,21 +368,16 @@ line-height: 1.14;
     color: var(--title-text-color);
     margin-bottom: 50px;
 }
-.clients-list{
-   display: inline-flex;
-   justify-content: center;
-   align-items: center;
-}
-.clients-example{
-    display: block;
+
+.clients-link{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border:1px solid  #AFB1B8;
     border-radius: 4px;
     width: 170px;
     height: 92px;
-    padding-bottom: 16px;
-    padding-right: 32px;
-    padding-top: 16px;
-    padding-left: 32px;
+   
 }
 .clients-icon{
     fill: #AFB1B8;
@@ -386,11 +388,15 @@ line-height: 1.14;
     fill: var(--accent-color);
 }
 
-.clients-example:hover .clients-icon{
-    border-color:1px solid var(--accent-color); 
+.clients-link:hover .clients-icon,
+.clients-link:focus .clients-icon{
     fill: var(--accent-color);
 }
-.clients-list:not(:last-child){
+.clients-link:hover,
+.clients-link:focus{
+border-color: var(--accent-color);
+}
+.clients-item:not(:last-child){
     margin-right: 30px;
 }
 
@@ -464,7 +470,7 @@ margin-bottom: 9px;
 .network-icon-foot:focus{
     fill: var(--primary-bg-color);
 }
-.connect-network-list{
+.connect-network-link{
     display:flex;
     justify-content: center;
     align-items: center;
@@ -476,7 +482,8 @@ margin-bottom: 9px;
     margin-right: 10px;
 }
 
-.connect-network-list:hover{
+.connect-network-link:hover,
+.connect-network-link:focus{
     background-color: var(--accent-color);
     fill: var(--primary-bg-color);
 }
